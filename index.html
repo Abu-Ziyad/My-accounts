@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حساباتي | xr5.ps</title>
+    
+    <!-- Google Fonts (Cairo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- CSS Styles -->
+    <style>
+        :root {
+            --bg-color-light: #e85a71;
+            --bg-color-dark: #d84a61;
+            --text-color: #000000;
+            --button-bg: #ffffff;
+            --button-border: #000000;
+            --font-family: 'Cairo', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family);
+            color: var(--text-color);
+            /* --- Chevron Background --- */
+            background-color: var(--bg-color-light);
+            background-image: repeating-linear-gradient(
+                45deg, 
+                var(--bg-color-dark) 25%, 
+                transparent 25%, 
+                transparent 75%, 
+                var(--bg-color-dark) 75%, 
+                var(--bg-color-dark)
+            ), 
+            repeating-linear-gradient(
+                -45deg, 
+                var(--bg-color-dark) 25%, 
+                transparent 25%, 
+                transparent 75%, 
+                var(--bg-color-dark) 75%, 
+                var(--bg-color-dark)
+            );
+            background-size: 60px 60px;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        /* --- Profile Section --- */
+        .profile-header {
+            margin-bottom: 25px;
+        }
+
+        .profile-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 4px solid var(--button-bg);
+            object-fit: cover;
+            margin-bottom: 15px;
+            background-color: white; /* Fallback color */
+        }
+
+        .profile-name {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .profile-bio {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: rgba(0, 0, 0, 0.85);
+        }
+
+        /* --- Social Icons Row --- */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        .social-icons a {
+            color: var(--text-color);
+            font-size: 1.8rem;
+            transition: transform 0.2s ease;
+        }
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+
+
+        /* --- Links Section --- */
+        .links-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .link-wrapper {
+            position: relative;
+            transition: transform 0.2s ease-in-out;
+        }
+        .link-wrapper:hover {
+            transform: translate(-4px, -4px);
+        }
+
+        .link-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            width: 100%;
+            height: 100%;
+            background-color: var(--button-border);
+            border-radius: 8px;
+            z-index: -1;
+        }
+        
+        .link-btn {
+            background-color: var(--button-bg);
+            border: 3px solid var(--button-border);
+            border-radius: 8px;
+            padding: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 1rem;
+            font-weight: 800;
+            cursor: pointer;
+            font-family: var(--font-family);
+            width: 100%;
+            text-align: center;
+        }
+
+        .link-btn .link-icon {
+            font-size: 1.4rem;
+        }
+
+        /* --- Tooltip for JS Feedback --- */
+        .tooltip {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #000000;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .tooltip.show {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Profile Section -->
+        <header class="profile-header">
+            <!-- يمكنك تغيير رابط الصورة هنا -->
+            <img src="Screenshot_٢٠٢٥-٠٦-١٣-١٠-٤٤-١٨-٤٨٣_com.zhiliaoapp.musically-edit.jpg" alt="صورة البروفايل" class="profile-img">
+            <h1 class="profile-name">@xr5.ps</h1>
+            <p class="profile-bio">حساباتي على منصات التواصل الاجتماعي</p>
+        </header>
+        
+        <!-- Social Icons Row -->
+        <div class="social-icons">
+            <a href="https://www.tiktok.com/@xr5.ps?_t=ZS-8xNioTrvcbB&_r=1" target="_blank" title="تيك توك"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/xr5.ps?igsh=cmZ5YzExZ2VtMGgx" target="_blank" title="انستجرام"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/1Auer5g6B4/" target="_blank" title="فيسبوك"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.snapchat.com/add/xr5-fajar?share_id=GeSqCjv29G4&locale=ar-EG-u-nu-latn" target="_blank" title="سناب شات"><i class="fab fa-snapchat"></i></a>
+            <a href="javascript:void(0);" id="discord-icon-link" title="ديسكورد"><i class="fab fa-discord"></i></a>
+        </div>
+
+        <!-- Links Section -->
+        <main class="links-container">
+            <div class="link-wrapper">
+                <a href="https://www.tiktok.com/@xr5.ps?_t=ZS-8xNioTrvcbB&_r=1" target="_blank" class="link-btn">
+                    <i class="fab fa-tiktok link-icon"></i>
+                    <span>تيك توك</span>
+                </a>
+            </div>
+            <div class="link-wrapper">
+                <a href="https://www.facebook.com/share/1Auer5g6B4/" target="_blank" class="link-btn">
+                    <i class="fab fa-facebook-f link-icon"></i>
+                    <span>فيسبوك</span>
+                </a>
+            </div>
+            <div class="link-wrapper">
+                <a href="https://www.instagram.com/xr5.ps?igsh=cmZ5YzExZ2VtMGgx" target="_blank" class="link-btn">
+                    <i class="fab fa-instagram link-icon"></i>
+                    <span>انستجرام</span>
+                </a>
+            </div>
+            <div class="link-wrapper">
+                <a href="https://www.snapchat.com/add/xr5-fajar?share_id=GeSqCjv29G4&locale=ar-EG-u-nu-latn" target="_blank" class="link-btn">
+                    <i class="fab fa-snapchat link-icon"></i>
+                    <span>سناب شات</span>
+                </a>
+            </div>
+            <div class="link-wrapper">
+                <button id="discord-btn" class="link-btn">
+                    <i class="fab fa-discord link-icon"></i>
+                    <span>نسخ يوزر ديسكورد</span>
+                </button>
+            </div>
+        </main>
+        
+    </div>
+
+    <!-- Tooltip for copy feedback -->
+    <div id="tooltip" class="tooltip">تم نسخ اليوزر بنجاح!</div>
+
+    <!-- JavaScript Code -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const discordBtn = document.getElementById('discord-btn');
+            const discordIconLink = document.getElementById('discord-icon-link');
+            const tooltip = document.getElementById('tooltip');
+            const discordUsername = 'fbi_billo';
+
+            const copyToClipboard = () => {
+                navigator.clipboard.writeText(discordUsername)
+                    .then(() => {
+                        tooltip.classList.add('show');
+                        setTimeout(() => {
+                            tooltip.classList.remove('show');
+                        }, 2000);
+                    })
+                    .catch(err => {
+                        console.error('فشل في نسخ اسم المستخدم: ', err);
+                        alert('عذراً، لم نتمكن من نسخ اسم المستخدم.');
+                    });
+            };
+
+            discordBtn.addEventListener('click', copyToClipboard);
+            discordIconLink.addEventListener('click', copyToClipboard); // Also copy when icon is clicked
+        });
+    </script>
+</body>
+</html>
